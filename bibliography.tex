@@ -1,0 +1,23 @@
+\documentclass[a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[backend=biber,bibencoding=utf8]{biblatex}
+\bibliography{all.bib}
+\usepackage{lmodern}
+\usepackage{amsmath,amssymb,amsthm}
+\begin{document}
+\nocite{*}
+\printbibliography
+
+
+\newcommand{\less}{<}
+\newcommand{\greater}{>}
+\end{document}
+
+1. cat bibtex/*bib > all.bib
+2. Use pandoc for html version.
+
+   pandoc bibliography.tex  -o output.html --bibliography all.bib
+
+3. Our use latex
+
+   latexmk -pdf bibliography.tex
